@@ -37,7 +37,6 @@ function ItemsDetailContainer() {
                     <p>{description}</p>
                 </div>
             </article>
-            
         </section>
         
     );
