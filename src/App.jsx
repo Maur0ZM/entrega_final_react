@@ -10,7 +10,7 @@ import { Contacto } from './pages/Contacto';
 import { Pulseras } from './pages/Pulseras';
 import ItemsDetailContainer from './pages/ItemsDetailContainer';
 import CategoryPage from './pages/CategoryPage';
-
+import Error from './pages/Error';
 function App() {
   return (
     <BrowserRouter>
@@ -23,7 +23,8 @@ function App() {
           <Route path="contacto" element={<Contacto />} />
           <Route path="pulseras" element={<Pulseras />} />
           <Route path="categoria/:categoriaId" element={<CategoryPage />} /> 
-          <Route path="/:productoId" element={<ItemsDetailContainer />} />
+          <Route path="producto/:productoId" element={<ItemsDetailContainer />} />
+          <Route path='*' element={<Error/>}  />
       </Routes>
       <Footer />
     </BrowserRouter>
