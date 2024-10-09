@@ -57,3 +57,4 @@ npm run build falla al minificar
 Esta sección se ha movido aquí: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
 proyecto_react_zuniga
+# entrega_final_react
