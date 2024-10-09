@@ -10,7 +10,9 @@ export const Logos = ({ Logo, Lupa, Carro, Insta }) => {
             </Link>
             <div className="flex gap-5">
                 <img className="size-8 cursor-pointer" src={Lupa} alt="LogoLupa" />
-                <img className="size-8 cursor-pointer" src={Carro} alt="LogoCarro" />
+                <Link to="/cart">
+                    <img className="size-8 cursor-pointer" src={Carro} alt="LogoCarro" />
+                </Link>
                 <CartWidget />
             </div>
         </div>

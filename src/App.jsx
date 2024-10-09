@@ -11,23 +11,29 @@ import { Pulseras } from './pages/Pulseras';
 import ItemsDetailContainer from './pages/ItemsDetailContainer';
 import CategoryPage from './pages/CategoryPage';
 import Error from './pages/Error';
+import { CartProvider } from './Context/Context';
+import Cart from './pages/cart';
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="aros" element={<Aros />} />
-          <Route path="collares" element={<Collares />} />
-          <Route path="nosotros" element={<Nosotros />} />
-          <Route path="contacto" element={<Contacto />} />
-          <Route path="pulseras" element={<Pulseras />} />
-          <Route path="categoria/:categoriaId" element={<CategoryPage />} /> 
-          <Route path="producto/:productoId" element={<ItemsDetailContainer />} />
-          <Route path='*' element={<Error/>}  />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="aros" element={<Aros />} />
+            <Route path="collares" element={<Collares />} />
+            <Route path="nosotros" element={<Nosotros />} />
+            <Route path="contacto" element={<Contacto />} />
+            <Route path="pulseras" element={<Pulseras />} />
+            <Route path="categoria/:categoriaId" element={<CategoryPage />} /> 
+            <Route path="producto/:productoId" element={<ItemsDetailContainer />} />
+            <Route path='/cart' element={<Cart/>} />
+            <Route path='*' element={<Error/>}  />
+        </Routes>
+        <Footer />
+     </BrowserRouter>
+    </CartProvider>
+    
   );
 }
 

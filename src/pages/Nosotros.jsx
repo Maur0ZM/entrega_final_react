@@ -1,5 +1,7 @@
+
+
 export const Nosotros = () =>{
     return (
-        <h1>Nosotros</h1>
+        <h1>Notros</h1>
     )
 }
